@@ -1,0 +1,434 @@
+2023-11-24 00:48:45,961 file: tool_utils.py func: tool_utils line No: 73 log will be stored in /home/users/zengpeng.sun/tianqi.shen/Tracking/Aerial/Deployments/LightTrack-X3/deploy/hb_mapper_checker.log
+2023-11-24 00:48:45,961 file: hb_mapper.py func: hb_mapper line No: 69 Start hb_mapper....
+2023-11-24 00:48:45,961 file: hb_mapper.py func: hb_mapper line No: 70 hbdk version 3.48.6
+2023-11-24 00:48:45,961 file: hb_mapper.py func: hb_mapper line No: 71 horizon_nn version 0.21.2
+2023-11-24 00:48:45,961 file: hb_mapper.py func: hb_mapper line No: 72 hb_mapper version 1.21.6
+2023-11-24 00:48:45,986 file: helper.py func: helper line No: 145 Model input names: ['input1', 'input2']
+2023-11-24 00:48:45,987 file: hb_mapper_checker.py func: hb_mapper_checker line No: 103 Model type: onnx
+2023-11-24 00:48:45,987 file: hb_mapper_checker.py func: hb_mapper_checker line No: 104 march: bernoulli2
+2023-11-24 00:48:45,987 file: hb_mapper_checker.py func: hb_mapper_checker line No: 109 input names ['input1', 'input2']
+2023-11-24 00:48:45,987 file: hb_mapper_checker.py func: hb_mapper_checker line No: 110 input shapes {'input1': [1, 3, 128, 128], 'input2': [1, 3, 256, 256]}
+2023-11-24 00:48:46,000 file: helper.py func: helper line No: 145 Model input names: ['input1', 'input2']
+2023-11-24 00:48:46,001 file: hb_mapper_checker.py func: hb_mapper_checker line No: 116 Begin model checking....
+2023-11-24 00:48:46,012 file: build.py func: build line No: 32 [Fri Nov 24 00:48:46 2023] Start to Horizon NN Model Convert.
+2023-11-24 00:48:46,012 file: build.py func: build line No: 92 HorizonNN version: 0.21.2
+2023-11-24 00:48:46,013 file: build.py func: build line No: 102 HBDK version: 3.48.6
+2023-11-24 00:48:46,013 file: model_debug.py func: model_debug line No: 61 Loading horizon_nn debug methods:[]
+2023-11-24 00:48:46,022 file: hbdk_dict_parser.py func: hbdk_dict_parser line No: 36 Parsing the hbdk parameter:{'hbdk_pass_through_params': '--O0'}
+2023-11-24 00:48:46,023 file: build.py func: build line No: 149 The specified model compilation architecture: bernoulli2.
+2023-11-24 00:48:46,023 file: build.py func: build line No: 151 The specified model compilation optimization parameters: [].
+2023-11-24 00:48:46,023 file: build.py func: build line No: 32 [Fri Nov 24 00:48:46 2023] Start to parse the onnx model.
+2023-11-24 00:48:46,151 file: onnx_parser.py func: onnx_parser line No: 125 Input ONNX model infomation:
+ONNX IR version:          6
+Opset version:            [11, 1]
+Producer:                 pytorch1.8
+Domain:                   none
+Input name:               input1, [1, 3, 128, 128]
+Input name:               input2, [1, 3, 256, 256]
+Output name:              output1, [1, 1, 16, 16]
+Output name:              output2, [1, 4, 16, 16]
+2023-11-24 00:48:46,197 file: build.py func: build line No: 35 [Fri Nov 24 00:48:46 2023] End to parse the onnx model.
+2023-11-24 00:48:46,209 file: build.py func: build line No: 200 Saving model: ./.hb_check/original_float_model.onnx.
+2023-11-24 00:48:46,210 file: build.py func: build line No: 32 [Fri Nov 24 00:48:46 2023] Start to optimize the model.
+2023-11-24 00:48:47,079 file: build.py func: build line No: 35 [Fri Nov 24 00:48:47 2023] End to optimize the model.
+2023-11-24 00:48:47,099 file: build.py func: build line No: 200 Saving model: ./.hb_check/optimized_float_model.onnx.
+2023-11-24 00:48:47,100 file: build.py func: build line No: 32 [Fri Nov 24 00:48:47 2023] Start to calibrate the model.
+2023-11-24 00:48:47,176 file: calibration_data_set.py func: calibration_data_set line No: 89 input name: input1,  number_of_samples: 1
+2023-11-24 00:48:47,176 file: calibration_data_set.py func: calibration_data_set line No: 89 input name: input2,  number_of_samples: 1
+2023-11-24 00:48:47,176 file: calibration_data_set.py func: calibration_data_set line No: 100 There are 1 samples in the calibration data set.
+2023-11-24 00:48:47,434 file: max_calibrater.py func: max_calibrater line No: 68 Run calibration model with max method.
+2023-11-24 00:48:47,703 file: calibrater.py func: calibrater line No: 208 Calibration using batch 1
+2023-11-24 00:48:49,155 file: build.py func: build line No: 35 [Fri Nov 24 00:48:49 2023] End to calibrate the model.
+2023-11-24 00:48:49,191 file: build.py func: build line No: 200 Saving model: ./.hb_check/calibrated_model.onnx.
+2023-11-24 00:48:49,191 file: build.py func: build line No: 32 [Fri Nov 24 00:48:49 2023] Start to quantize the model.
+2023-11-24 00:48:52,170 file: build.py func: build line No: 35 [Fri Nov 24 00:48:52 2023] End to quantize the model.
+2023-11-24 00:48:52,323 file: build.py func: build line No: 200 Saving model: ./.hb_check/quantized_model.onnx.
+2023-11-24 00:48:52,772 file: build.py func: build line No: 32 [Fri Nov 24 00:48:52 2023] Start to compile the model with march bernoulli2.
+2023-11-24 00:48:52,772 file: build.py func: build line No: 35 [Fri Nov 24 00:48:52 2023] End to compile the model with march bernoulli2.
+2023-11-24 00:48:53,043 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_0
+2023-11-24 00:48:53,182 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-24 00:48:53,182 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjngzz7uv/torch-jit-export_subgraph_0.hbir -o /tmp/tmpjngzz7uv/torch-jit-export_subgraph_0.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-24 00:48:53,864 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.429221
+2023-11-24 00:48:54,060 file: tool_utils.py func: tool_utils line No: 322 FPS=341.22, latency = 2930.7 us, DDR = 17468144 bytes   (see ./.hb_check/torch-jit-export_subgraph_0.html)
+2023-11-24 00:48:54,068 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_1
+2023-11-24 00:48:54,252 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-24 00:48:54,252 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjngzz7uv/torch-jit-export_subgraph_1.hbir -o /tmp/tmpjngzz7uv/torch-jit-export_subgraph_1.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-24 00:48:54,727 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.412663
+2023-11-24 00:48:54,799 file: tool_utils.py func: tool_utils line No: 322 FPS=125.07, latency = 7995.5 us, DDR = 47436256 bytes   (see ./.hb_check/torch-jit-export_subgraph_1.html)
+2023-11-24 00:48:54,805 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_2
+2023-11-24 00:48:54,889 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-24 00:48:54,889 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjngzz7uv/torch-jit-export_subgraph_2.hbir -o /tmp/tmpjngzz7uv/torch-jit-export_subgraph_2.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-24 00:48:55,028 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0734657
+2023-11-24 00:48:55,106 file: tool_utils.py func: tool_utils line No: 322 FPS=801.47, latency = 1247.7 us, DDR = 4341440 bytes   (see ./.hb_check/torch-jit-export_subgraph_2.html)
+2023-11-24 00:48:55,404 file: node_info.py func: node_info line No: 57 The converted model node information:
+======================================================================================================
+Node                                               ON   Subgraph  Type               In/Out DataType  
+------------------------------------------------------------------------------------------------------
+Conv_0                                             BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_2                                              BPU  id(0)     HzLut              int8/int8        
+Conv_3                                             BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_5                                              BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_6_SPLIT_WITH_DEPTHWISE_CONV_0    BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_6_SPLIT_WITH_DEPTHWISE_CONV_1    BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_6                                BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_7                                             BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_9                                             BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_10                                         BPU  id(0)     HzLut              int8/int8        
+Mul_11                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_12                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_14                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_16                                             BPU  id(0)     HzLut              int8/int8        
+Conv_17                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_19                                             BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_20_SPLIT_WITH_DEPTHWISE_CONV_0   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_20_SPLIT_WITH_DEPTHWISE_CONV_1   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_20                               BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_21                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_23                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_24                                         BPU  id(0)     HzLut              int8/int8        
+Mul_25                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_26                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_27                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_29                                             BPU  id(0)     HzLut              int8/int8        
+Conv_30                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_32                                             BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_33_SPLIT_WITH_DEPTHWISE_CONV_0   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_33_SPLIT_WITH_DEPTHWISE_CONV_1   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_33                               BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_34                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_36                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_37                                         BPU  id(0)     HzLut              int8/int8        
+Mul_38                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_39                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_41                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_43                                             BPU  id(0)     HzLut              int8/int8        
+Conv_44                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_46                                             BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_47_SPLIT_WITH_DEPTHWISE_CONV_0   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_47                               BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_48                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_50                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_51                                         BPU  id(0)     HzLut              int8/int8        
+Mul_52                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_53                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_54                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_56                                             BPU  id(0)     HzLut              int8/int8        
+Conv_57                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_59                                             BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_60_SPLIT_WITH_DEPTHWISE_CONV_0   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_60                               BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_61                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_63                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_64                                         BPU  id(0)     HzLut              int8/int8        
+Mul_65                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_66                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_68                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_70                                             BPU  id(0)     HzLut              int8/int8        
+Conv_71                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_73                                             BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_74_SPLIT_WITH_DEPTHWISE_CONV_0   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_74                               BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_75                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_77                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_78                                         BPU  id(0)     HzLut              int8/int8        
+Mul_79                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_80                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_82                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_84                                             BPU  id(0)     HzLut              int8/int8        
+Conv_85                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_87                                             BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_88_SPLIT_WITH_DEPTHWISE_CONV_0   BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_88                               BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_89                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_91                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_92                                         BPU  id(0)     HzLut              int8/int8        
+Mul_93                                             BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_94                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_96                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_98                                             BPU  id(0)     HzLut              int8/int8        
+Conv_99                                            BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_101                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_102_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_102                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_103                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_105                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_106                                        BPU  id(0)     HzLut              int8/int8        
+Mul_107                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_108                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_109                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_111                                            BPU  id(0)     HzLut              int8/int8        
+Conv_112                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_114                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_115_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_115                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_116                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_118                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_119                                        BPU  id(0)     HzLut              int8/int8        
+Mul_120                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_121                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_123                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_125                                            BPU  id(0)     HzLut              int8/int8        
+Conv_126                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_128                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_129_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_129                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_130                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_132                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_133                                        BPU  id(0)     HzLut              int8/int8        
+Mul_134                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_135                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_137                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_139                                            BPU  id(0)     HzLut              int8/int8        
+Conv_140                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_142                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_143_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_143                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_144                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_146                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_147                                        BPU  id(0)     HzLut              int8/int8        
+Mul_148                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_149                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_151                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_153                                            BPU  id(0)     HzLut              int8/int8        
+Conv_154                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_156                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_157_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_157                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_158                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_160                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_161                                        BPU  id(0)     HzLut              int8/int8        
+Mul_162                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_163                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_164                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_166                                            BPU  id(0)     HzLut              int8/int8        
+Conv_167                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_169                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_170_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_170                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_171                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_173                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_174                                        BPU  id(0)     HzLut              int8/int8        
+Mul_175                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_176                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_178                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_180                                            BPU  id(0)     HzLut              int8/int8        
+Conv_181                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Mul_183                                            BPU  id(0)     HzLut              int8/int8        
+GlobalAveragePool_184_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(0)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_184                              BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_185                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_187                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Sigmoid_188                                        BPU  id(0)     HzLut              int8/int8        
+Mul_189                                            BPU  id(0)     HzSElementwiseMul  int8/int8        
+Conv_190                                           BPU  id(0)     HzSQuantizedConv   int8/int8        
+Conv_192                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_194                                            BPU  id(1)     HzLut              int8/int8        
+Conv_195                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_197                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_198_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_198_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_198_SPLIT_WITH_DEPTHWISE_CONV_2  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_198                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_199                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_201                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_202                                        BPU  id(1)     HzLut              int8/int8        
+Mul_203                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_204                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_206                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_208                                            BPU  id(1)     HzLut              int8/int8        
+Conv_209                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_211                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_212_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_212_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_212                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_213                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_215                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_216                                        BPU  id(1)     HzLut              int8/int8        
+Mul_217                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_218                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_219                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_221                                            BPU  id(1)     HzLut              int8/int8        
+Conv_222                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_224                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_225_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_225_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_225                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_226                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_228                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_229                                        BPU  id(1)     HzLut              int8/int8        
+Mul_230                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_231                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_233                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_235                                            BPU  id(1)     HzLut              int8/int8        
+Conv_236                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_238                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_239_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_239_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_239                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_240                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_242                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_243                                        BPU  id(1)     HzLut              int8/int8        
+Mul_244                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_245                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_246                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_248                                            BPU  id(1)     HzLut              int8/int8        
+Conv_249                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_251                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_252_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_252_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_252                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_253                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_255                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_256                                        BPU  id(1)     HzLut              int8/int8        
+Mul_257                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_258                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_260                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_262                                            BPU  id(1)     HzLut              int8/int8        
+Conv_263                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_265                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_266_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_266_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_266                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_267                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_269                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_270                                        BPU  id(1)     HzLut              int8/int8        
+Mul_271                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_272                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_274                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_276                                            BPU  id(1)     HzLut              int8/int8        
+Conv_277                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_279                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_280_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_280_SPLIT_WITH_DEPTHWISE_CONV_1  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_280                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_281                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_283                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_284                                        BPU  id(1)     HzLut              int8/int8        
+Mul_285                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_286                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_288                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_290                                            BPU  id(1)     HzLut              int8/int8        
+Conv_291                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_293                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_294_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_294                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_295                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_297                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_298                                        BPU  id(1)     HzLut              int8/int8        
+Mul_299                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_300                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_301                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_303                                            BPU  id(1)     HzLut              int8/int8        
+Conv_304                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_306                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_307_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_307                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_308                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_310                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_311                                        BPU  id(1)     HzLut              int8/int8        
+Mul_312                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_313                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_315                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_317                                            BPU  id(1)     HzLut              int8/int8        
+Conv_318                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_320                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_321_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_321                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_322                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_324                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_325                                        BPU  id(1)     HzLut              int8/int8        
+Mul_326                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_327                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_329                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_331                                            BPU  id(1)     HzLut              int8/int8        
+Conv_332                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_334                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_335_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_335                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_336                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_338                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_339                                        BPU  id(1)     HzLut              int8/int8        
+Mul_340                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_341                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_343                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_345                                            BPU  id(1)     HzLut              int8/int8        
+Conv_346                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_348                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_349_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_349                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_350                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_352                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_353                                        BPU  id(1)     HzLut              int8/int8        
+Mul_354                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_355                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_356                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_358                                            BPU  id(1)     HzLut              int8/int8        
+Conv_359                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_361                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_362_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_362                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_363                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_365                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_366                                        BPU  id(1)     HzLut              int8/int8        
+Mul_367                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_368                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_370                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_372                                            BPU  id(1)     HzLut              int8/int8        
+Conv_373                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Mul_375                                            BPU  id(1)     HzLut              int8/int8        
+GlobalAveragePool_376_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(1)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_376                              BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_377                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Conv_379                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+Sigmoid_380                                        BPU  id(1)     HzLut              int8/int8        
+Mul_381                                            BPU  id(1)     HzSElementwiseMul  int8/int8        
+Conv_382                                           BPU  id(1)     HzSQuantizedConv   int8/int8        
+UNIT_CONV_FOR_BatchNormalization_384               BPU  id(0)     HzSQuantizedConv   int8/int32       
+UNIT_CONV_FOR_BatchNormalization_385               BPU  id(1)     HzSQuantizedConv   int8/int32       
+Reshape_401                                        CPU  --        Reshape            float/float      
+Transpose_402                                      CPU  --        Transpose          float/float      
+Reshape_406                                        CPU  --        Reshape            float/float      
+MatMul_407                                         CPU  --        MatMul             float/float      
+Reshape_412                                        CPU  --        Reshape            float/float      
+GlobalAveragePool_413_SPLIT_WITH_DEPTHWISE_CONV_0  BPU  id(2)     HzSQuantizedConv   int8/int8        
+GlobalAveragePool_413                              BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_414                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_416                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Sigmoid_417                                        BPU  id(2)     HzLut              int8/int8        
+Mul_418                                            BPU  id(2)     HzSElementwiseMul  int8/int8        
+Conv_419                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_420                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_421                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_423                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_424                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_426                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_427                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_429                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_430                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_432                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_433                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_435                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_436                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_438                                           BPU  id(2)     HzSQuantizedConv   int8/int32       
+Conv_441                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_442                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_444                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_445                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_447                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_448                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_450                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_451                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_453                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_454                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_456                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_457                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_459                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_460                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_462                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_463                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Conv_465                                           BPU  id(2)     HzSQuantizedConv   int8/int8        
+Mul_468                                            BPU  id(2)     HzSQuantizedConv   int8/int32
+2023-11-24 00:48:55,412 file: build.py func: build line No: 35 [Fri Nov 24 00:48:55 2023] End to Horizon NN Model Convert.
+2023-11-24 00:48:55,448 file: onnx2horizonrt.py func: onnx2horizonrt line No: 4281 ONNX model output num : 2
+2023-11-24 00:48:55,454 file: onnx2horizonrt.py func: onnx2horizonrt line No: 4015 model_deps_info: {'hb_mapper_version': '1.21.6'}
+2023-11-24 00:48:55,458 file: hb_mapper_checker.py func: hb_mapper_checker line No: 167 End model checking....
