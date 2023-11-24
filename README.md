@@ -65,11 +65,9 @@ You can visualize onnx model by using [netron](https://netron.app/).
 python -m onnxsim LightTrack.onnx LightTrack_sim.onnx
 ```
 3. Generate files for calibration:
-```
-python calibration.py
-```
-This step requires training datasets described in official implementation of LightTrack or pysot[3].
-If you do not want to prepare datasets, we also provide calibration files in calibration.tar.gz.
+
+This step requires training datasets described in official implementation of LightTrack or pysot[3].  
+We directly provide calibration files in calibration.tar.gz.
 
 4. Convert onnx model: LightTrack.bin
 ```
