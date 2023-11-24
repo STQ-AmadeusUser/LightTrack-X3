@@ -6,7 +6,7 @@ This is an unofficial X3 pi deployment of LightTrack[1] based on Python, whose o
 ## Model Overview
 Tracker | MACs | Params | FPS | Avg Latency | DDR Latency | Subgraph | BPU Util1 | BPU Util2 | DTB70 Success
 --- | --- | --- | --- |--- |--- |--- |--- |--- |---
-LightTrack | 0.53G | 1.97M | 33.48 | 118.72ms | 239.43ms | 3 | 20.75% | 14.25% | 0.587
+LightTrack | 0.53G | 1.97M | 33.48 | 118.72ms | 239.43ms | 3 | 20.36% | 14.18% | 0.587
 
 We test BPU utilization rate by using hrut_somstatus while testing static performance with 4 threads:
 ```
@@ -89,7 +89,7 @@ We provide static performance of LightTrack by running on X3 pi:
 hrt_model_exec perf --model_file LightTrack.bin --thread_num 1
 ```
 <div align="center">
-  <img src="https://github.com/STQ-AmadeusUser/LightTrack-Deployment/blob/main/images/1_thread.png">
+  <img src="https://github.com/STQ-AmadeusUser/LightTrack-X3/blob/main/images/1_thread.png">
 </div>
 
 2. 4 thread:
@@ -97,7 +97,7 @@ hrt_model_exec perf --model_file LightTrack.bin --thread_num 1
 hrt_model_exec perf --model_file LightTrack.bin --thread_num 4
 ```
 <div align="center">
-  <img src="https://github.com/STQ-AmadeusUser/LightTrack-Deployment/blob/main/images/4_thread.png">
+  <img src="https://github.com/STQ-AmadeusUser/LightTrack-X3/blob/main/images/4_thread.png">
 </div>
 
 ## Version
